@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_hero_hero_tags",
+  "info": {
+    "displayName": "HeroTag"
+  },
+  "options": {},
+  "attributes": {
+    "textUp": {
+      "type": "string"
+    },
+    "textDown": {
+      "type": "string"
+    },
+    "position": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "right"
+      ]
+    },
+    "hasMarker": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_hero_hero_slidings",
+  "info": {
+    "displayName": "HeroSliding"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "direction": {
+      "type": "enumeration",
+      "enum": [
+        "top",
+        "bottom"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_home_heroes",
+  "info": {
+    "displayName": "Hero"
+  },
+  "options": {},
+  "attributes": {
+    "titlePrefix": {
+      "type": "component",
+      "component": "hero.hero-tag",
+      "repeatable": false
+    },
+    "firstTitle": {
+      "type": "component",
+      "component": "hero.hero-sliding",
+      "repeatable": false
+    },
+    "secondTitle": {
+      "type": "component",
+      "component": "hero.hero-sliding",
+      "repeatable": false
+    },
+    "titleSuffix": {
+      "type": "component",
+      "component": "hero.hero-tag",
+      "repeatable": false
+    },
+    "topRight": {
+      "type": "component",
+      "component": "hero.hero-tag",
+      "repeatable": false
+    },
+    "topLeft": {
+      "type": "component",
+      "component": "hero.hero-tag",
+      "repeatable": false
+    },
+    "bottomRight": {
+      "type": "component",
+      "component": "hero.hero-tag",
+      "repeatable": false
+    },
+    "bottomLeft": {
+      "type": "component",
+      "component": "hero.hero-tag",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}
