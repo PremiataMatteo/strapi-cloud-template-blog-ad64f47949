@@ -5,19 +5,14 @@
   },
   "options": {},
   "attributes": {
-    "titlePrefix": {
+    "Title": {
       "type": "component",
       "component": "hero.hero-tag",
       "repeatable": false
     },
-    "firstTitle": {
+    "titlePrefix": {
       "type": "component",
-      "component": "hero.hero-sliding",
-      "repeatable": false
-    },
-    "secondTitle": {
-      "type": "component",
-      "component": "hero.hero-sliding",
+      "component": "hero.hero-tag",
       "repeatable": false
     },
     "titleSuffix": {

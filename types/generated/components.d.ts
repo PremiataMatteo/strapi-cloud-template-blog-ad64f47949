@@ -1,26 +1,13 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface HeroHeroSliding extends Struct.ComponentSchema {
-  collectionName: 'components_hero_hero_slidings';
-  info: {
-    displayName: 'HeroSliding';
-  };
-  attributes: {
-    direction: Schema.Attribute.Enumeration<['top', 'bottom']>;
-    text: Schema.Attribute.String;
-  };
-}
-
 export interface HeroHeroTag extends Struct.ComponentSchema {
   collectionName: 'components_hero_hero_tags';
   info: {
-    displayName: 'HeroTag';
+    displayName: 'Hero String';
   };
   attributes: {
-    hasMarker: Schema.Attribute.Boolean;
-    position: Schema.Attribute.Enumeration<['left', 'right']>;
-    textDown: Schema.Attribute.String;
-    textUp: Schema.Attribute.String;
+    firstText: Schema.Attribute.String;
+    secondText: Schema.Attribute.String;
   };
 }
 
@@ -32,8 +19,7 @@ export interface HomeHero extends Struct.ComponentSchema {
   attributes: {
     bottomLeft: Schema.Attribute.Component<'hero.hero-tag', false>;
     bottomRight: Schema.Attribute.Component<'hero.hero-tag', false>;
-    firstTitle: Schema.Attribute.Component<'hero.hero-sliding', false>;
-    secondTitle: Schema.Attribute.Component<'hero.hero-sliding', false>;
+    Title: Schema.Attribute.Component<'hero.hero-tag', false>;
     titlePrefix: Schema.Attribute.Component<'hero.hero-tag', false>;
     titleSuffix: Schema.Attribute.Component<'hero.hero-tag', false>;
     topLeft: Schema.Attribute.Component<'hero.hero-tag', false>;
@@ -106,7 +92,6 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'hero.hero-sliding': HeroHeroSliding;
       'hero.hero-tag': HeroHeroTag;
       'home.hero': HomeHero;
       'shared.media': SharedMedia;
