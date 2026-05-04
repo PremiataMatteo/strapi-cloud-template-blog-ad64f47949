@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_products",
+  "info": {
+    "displayName": "Product"
+  },
+  "options": {},
+  "attributes": {
+    "handle": {
+      "type": "string",
+      "required": true
+    },
+    "Image": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

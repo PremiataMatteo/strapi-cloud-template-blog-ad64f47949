@@ -11,6 +11,21 @@ export interface HeroHeroTag extends Struct.ComponentSchema {
   };
 }
 
+export interface Home3DVideo extends Struct.ComponentSchema {
+  collectionName: 'components_home_3d_videos';
+  info: {
+    displayName: '3d Video';
+  };
+  attributes: {
+    block_ref_id: Schema.Attribute.String;
+    Text1: Schema.Attribute.String & Schema.Attribute.Required;
+    Text2: Schema.Attribute.String & Schema.Attribute.Required;
+    Text3: Schema.Attribute.String & Schema.Attribute.Required;
+    Title: Schema.Attribute.Text & Schema.Attribute.Required;
+    Video_3d: Schema.Attribute.Component<'shared.video', false>;
+  };
+}
+
 export interface HomeHero extends Struct.ComponentSchema {
   collectionName: 'components_home_heroes';
   info: {
@@ -19,7 +34,9 @@ export interface HomeHero extends Struct.ComponentSchema {
   attributes: {
     bottomLeft: Schema.Attribute.Component<'hero.hero-tag', false>;
     bottomRight: Schema.Attribute.Component<'hero.hero-tag', false>;
-    Title: Schema.Attribute.Component<'hero.hero-tag', false>;
+    discover_more: Schema.Attribute.String;
+    Title: Schema.Attribute.Component<'hero.hero-tag', false> &
+      Schema.Attribute.Required;
     titlePrefix: Schema.Attribute.Component<'hero.hero-tag', false>;
     titleSuffix: Schema.Attribute.Component<'hero.hero-tag', false>;
     topLeft: Schema.Attribute.Component<'hero.hero-tag', false>;
@@ -27,14 +44,27 @@ export interface HomeHero extends Struct.ComponentSchema {
   };
 }
 
-export interface SharedMedia extends Struct.ComponentSchema {
-  collectionName: 'components_shared_media';
+export interface SharedImage extends Struct.ComponentSchema {
+  collectionName: 'components_shared_images';
   info: {
-    displayName: 'Media';
-    icon: 'file-video';
+    displayName: 'Image';
   };
   attributes: {
-    file: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    Alt: Schema.Attribute.String & Schema.Attribute.Required;
+    Media: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    Media_Mobile: Schema.Attribute.Media<'images' | 'files'>;
+  };
+}
+
+export interface SharedProduct extends Struct.ComponentSchema {
+  collectionName: 'components_shared_products';
+  info: {
+    displayName: 'Product';
+  };
+  attributes: {
+    handle: Schema.Attribute.String & Schema.Attribute.Required;
+    Image: Schema.Attribute.Component<'shared.image', false>;
   };
 }
 
@@ -89,16 +119,33 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedVideo extends Struct.ComponentSchema {
+  collectionName: 'components_shared_videos';
+  info: {
+    displayName: 'Video';
+  };
+  attributes: {
+    Poster: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    Video_Desktop: Schema.Attribute.Media<'videos' | 'files'> &
+      Schema.Attribute.Required;
+    Video_Mobile: Schema.Attribute.Media<'files' | 'videos'>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'hero.hero-tag': HeroHeroTag;
+      'home.3d-video': Home3DVideo;
       'home.hero': HomeHero;
-      'shared.media': SharedMedia;
+      'shared.image': SharedImage;
+      'shared.product': SharedProduct;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.video': SharedVideo;
     }
   }
 }

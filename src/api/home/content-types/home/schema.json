@@ -14,7 +14,8 @@
     "Sections": {
       "type": "dynamiczone",
       "components": [
-        "home.hero"
+        "home.hero",
+        "home.3d-video"
       ]
     }
   }

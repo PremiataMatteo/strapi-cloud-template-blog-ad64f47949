@@ -8,7 +8,8 @@
     "Title": {
       "type": "component",
       "component": "hero.hero-tag",
-      "repeatable": false
+      "repeatable": false,
+      "required": true
     },
     "titlePrefix": {
       "type": "component",
@@ -39,6 +40,9 @@
       "type": "component",
       "component": "hero.hero-tag",
       "repeatable": false
+    },
+    "discover_more": {
+      "type": "string"
     }
   },
   "config": {}
