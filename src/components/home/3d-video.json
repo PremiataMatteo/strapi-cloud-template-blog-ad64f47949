@@ -14,16 +14,16 @@
       "type": "text",
       "required": true
     },
-    "Text1": {
+    "highlightPrimary": {
       "type": "string",
       "required": true
     },
-    "Text2": {
+    "highlightSecondary": {
       "type": "string",
       "required": true
     },
-    "Text3": {
-      "type": "string",
+    "Body": {
+      "type": "blocks",
       "required": true
     },
     "block_ref_id": {

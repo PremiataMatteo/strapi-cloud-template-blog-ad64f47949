@@ -18,9 +18,9 @@ export interface Home3DVideo extends Struct.ComponentSchema {
   };
   attributes: {
     block_ref_id: Schema.Attribute.String;
-    Text1: Schema.Attribute.String & Schema.Attribute.Required;
-    Text2: Schema.Attribute.String & Schema.Attribute.Required;
-    Text3: Schema.Attribute.String & Schema.Attribute.Required;
+    Body: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    highlightPrimary: Schema.Attribute.String & Schema.Attribute.Required;
+    highlightSecondary: Schema.Attribute.String & Schema.Attribute.Required;
     Title: Schema.Attribute.Text & Schema.Attribute.Required;
     Video_3d: Schema.Attribute.Component<'shared.video', false>;
   };
