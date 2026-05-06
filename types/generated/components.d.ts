@@ -57,6 +57,28 @@ export interface SharedImage extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedLink extends Struct.ComponentSchema {
+  collectionName: 'components_shared_links';
+  info: {
+    displayName: 'Link';
+  };
+  attributes: {
+    href: Schema.Attribute.String & Schema.Attribute.Required;
+    Label: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SharedMenu extends Struct.ComponentSchema {
+  collectionName: 'components_shared_menus';
+  info: {
+    displayName: 'Menu';
+  };
+  attributes: {
+    Links: Schema.Attribute.Component<'shared.link', true>;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedProduct extends Struct.ComponentSchema {
   collectionName: 'components_shared_products';
   info: {
@@ -101,9 +123,10 @@ export interface SharedSeo extends Struct.ComponentSchema {
     name: 'Seo';
   };
   attributes: {
+    h1: Schema.Attribute.String & Schema.Attribute.Required;
     metaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
     metaTitle: Schema.Attribute.String & Schema.Attribute.Required;
-    shareImage: Schema.Attribute.Media<'images'>;
+    shareImage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
   };
 }
 
@@ -116,6 +139,16 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
   attributes: {
     files: Schema.Attribute.Media<'images', true>;
+  };
+}
+
+export interface SharedString extends Struct.ComponentSchema {
+  collectionName: 'components_shared_strings';
+  info: {
+    displayName: 'String';
+  };
+  attributes: {
+    Value: Schema.Attribute.String;
   };
 }
 
@@ -140,11 +173,14 @@ declare module '@strapi/strapi' {
       'home.3d-video': Home3DVideo;
       'home.hero': HomeHero;
       'shared.image': SharedImage;
+      'shared.link': SharedLink;
+      'shared.menu': SharedMenu;
       'shared.product': SharedProduct;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.string': SharedString;
       'shared.video': SharedVideo;
     }
   }

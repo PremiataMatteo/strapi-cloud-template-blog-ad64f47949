@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "homes",
+  "collectionName": "footers",
   "info": {
-    "singularName": "home",
-    "pluralName": "homes",
-    "displayName": "Home"
+    "singularName": "footer",
+    "pluralName": "footers",
+    "displayName": "Footer"
   },
   "options": {
     "draftAndPublish": true
@@ -15,37 +15,37 @@
     }
   },
   "attributes": {
-    "VideoBackground": {
+    "Strings": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "shared.string",
+      "repeatable": true,
+      "required": true,
+      "max": 2
+    },
+    "Newsletter": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "MenuList": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "shared.video",
-      "repeatable": false
-    },
-    "Seo": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "shared.seo",
-      "repeatable": false
-    },
-    "Sections": {
-      "type": "dynamiczone",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "components": [
-        "home.hero",
-        "home.3d-video"
-      ]
+      "component": "shared.menu",
+      "repeatable": true,
+      "required": true
     }
   }
 }
