@@ -28,4 +28,9 @@ module.exports = ({ env }) => ({
       },
     },
   },
+  settings: {
+    sizeLimit: 209715200,
+    allowedTypes: ['image/jpeg', 'image/png', 'image/jpg', 'video/mp4'],
+    responsiveDimensions: true,
+  },
 });
