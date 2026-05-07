@@ -1,4 +1,4 @@
-module.exports = [
+module.exports = () => [
   'strapi::logger',
   'strapi::errors',
   {
@@ -12,20 +12,20 @@ module.exports = [
             "'self'",
             'data:',
             'blob:',
-            'market-assets.strapi.io',
-            '*.linodeobjects.com',
-            'apparelassets.premiata.it',
+            'https://market-assets.strapi.io',
+            'https://*.linodeobjects.com',
             'https://apparelassets.premiata.it',
+            'https://*.premiata.it',
             '*.strapiapp.com',
           ],
           'media-src': [
             "'self'",
             'data:',
             'blob:',
-            'market-assets.strapi.io',
-            '*.linodeobjects.com',
-            'apparelassets.premiata.it',
+            'https://market-assets.strapi.io',
+            'https://*.linodeobjects.com',
             'https://apparelassets.premiata.it',
+            'https://*.premiata.it',
             '*.strapiapp.com',
           ],
           upgradeInsecureRequests: null,
