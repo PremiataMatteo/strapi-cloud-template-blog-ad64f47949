@@ -12,17 +12,21 @@ module.exports = [
             "'self'",
             'data:',
             'blob:',
-            'market-assets.strapi.io', // Necessario per l'admin di Strapi
-            '*.linodeobjects.com',      // Permette le immagini da Linode
-            'apparelassets.premiata.it'
+            'market-assets.strapi.io',
+            '*.linodeobjects.com',
+            'apparelassets.premiata.it',
+            'https://apparelassets.premiata.it',
+            '*.strapiapp.com',
           ],
           'media-src': [
             "'self'",
             'data:',
             'blob:',
             'market-assets.strapi.io',
-            '*.linodeobjects.com',      // Permette i video/audio da Linode
-            'apparelassets.premiata.it'
+            '*.linodeobjects.com',
+            'apparelassets.premiata.it',
+            'https://apparelassets.premiata.it',
+            '*.strapiapp.com',
           ],
           upgradeInsecureRequests: null,
         },
