@@ -44,7 +44,8 @@
       },
       "components": [
         "home.hero",
-        "home.3d-video"
+        "home.3d-video",
+        "home.outfit-gallery"
       ]
     }
   }

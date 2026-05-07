@@ -44,6 +44,31 @@ export interface HomeHero extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeLook extends Struct.ComponentSchema {
+  collectionName: 'components_home_looks';
+  info: {
+    displayName: 'Look';
+  };
+  attributes: {
+    Image: Schema.Attribute.Media<'images' | 'files'>;
+    products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
+    Video: Schema.Attribute.Media<'files' | 'videos'>;
+  };
+}
+
+export interface HomeOutfitGallery extends Struct.ComponentSchema {
+  collectionName: 'components_home_outfit_galleries';
+  info: {
+    displayName: 'Outfit Gallery';
+  };
+  attributes: {
+    Description: Schema.Attribute.Blocks;
+    Looks: Schema.Attribute.Component<'home.look', true> &
+      Schema.Attribute.Required;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedImage extends Struct.ComponentSchema {
   collectionName: 'components_shared_images';
   info: {
@@ -76,17 +101,6 @@ export interface SharedMenu extends Struct.ComponentSchema {
   attributes: {
     Links: Schema.Attribute.Component<'shared.link', true>;
     Title: Schema.Attribute.String & Schema.Attribute.Required;
-  };
-}
-
-export interface SharedProduct extends Struct.ComponentSchema {
-  collectionName: 'components_shared_products';
-  info: {
-    displayName: 'Product';
-  };
-  attributes: {
-    handle: Schema.Attribute.String & Schema.Attribute.Required;
-    Image: Schema.Attribute.Component<'shared.image', false>;
   };
 }
 
@@ -172,10 +186,11 @@ declare module '@strapi/strapi' {
       'hero.hero-tag': HeroHeroTag;
       'home.3d-video': Home3DVideo;
       'home.hero': HomeHero;
+      'home.look': HomeLook;
+      'home.outfit-gallery': HomeOutfitGallery;
       'shared.image': SharedImage;
       'shared.link': SharedLink;
       'shared.menu': SharedMenu;
-      'shared.product': SharedProduct;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
