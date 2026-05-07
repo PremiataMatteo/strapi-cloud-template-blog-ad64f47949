@@ -11,6 +11,10 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
     "products": {
       "type": "relation",
       "relation": "oneToMany",

@@ -21,19 +21,11 @@ module.exports = ({ env }) => ({
           },
         },
       },
-     security: {
-        sizeLimit: 100 * 1024 * 1024,
-        allowedTypes: [
-          "image/jpeg",
-          "image/png",
-          "image/svg+xml",
-          "image/webp",
-          "video/mp4",
-          "video/quicktime",
-          "video/x-msvideo"
-        ],
+      actionOptions: {
+        upload: {},
+        uploadStream: {},
+        delete: {},
       },
-      // -------------------------------------------------------
     },
   },
 });
