@@ -17,14 +17,22 @@
       "target": "api::product.product"
     },
     "Video": {
-      "type": "component",
-      "component": "shared.video",
-      "repeatable": true
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files",
+        "videos"
+      ]
     },
     "Image": {
-      "type": "component",
-      "component": "shared.image",
-      "repeatable": false
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
     }
   }
 }

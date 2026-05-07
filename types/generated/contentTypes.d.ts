@@ -547,7 +547,8 @@ export interface ApiLookLook extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Image: Schema.Attribute.Component<'shared.image', false>;
+    Image: Schema.Attribute.Media<'images' | 'files', true> &
+      Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::look.look'> &
       Schema.Attribute.Private;
@@ -556,7 +557,8 @@ export interface ApiLookLook extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Video: Schema.Attribute.Component<'shared.video', true>;
+    Video: Schema.Attribute.Media<'files' | 'videos'> &
+      Schema.Attribute.Required;
   };
 }
 
