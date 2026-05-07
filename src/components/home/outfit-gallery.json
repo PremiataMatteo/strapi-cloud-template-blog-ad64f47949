@@ -13,11 +13,10 @@
       "type": "blocks",
       "required": false
     },
-    "Looks": {
-      "type": "component",
-      "component": "home.look",
-      "repeatable": true,
-      "required": true
+    "looks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::look.look"
     }
   },
   "config": {}

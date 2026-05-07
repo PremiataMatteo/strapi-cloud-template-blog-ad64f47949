@@ -44,18 +44,6 @@ export interface HomeHero extends Struct.ComponentSchema {
   };
 }
 
-export interface HomeLook extends Struct.ComponentSchema {
-  collectionName: 'components_home_looks';
-  info: {
-    displayName: 'Look';
-  };
-  attributes: {
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
-    Video: Schema.Attribute.Media<'files' | 'videos'>;
-  };
-}
-
 export interface HomeOutfitGallery extends Struct.ComponentSchema {
   collectionName: 'components_home_outfit_galleries';
   info: {
@@ -63,8 +51,7 @@ export interface HomeOutfitGallery extends Struct.ComponentSchema {
   };
   attributes: {
     Description: Schema.Attribute.Blocks;
-    Looks: Schema.Attribute.Component<'home.look', true> &
-      Schema.Attribute.Required;
+    looks: Schema.Attribute.Relation<'oneToMany', 'api::look.look'>;
     Title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -186,7 +173,6 @@ declare module '@strapi/strapi' {
       'hero.hero-tag': HeroHeroTag;
       'home.3d-video': Home3DVideo;
       'home.hero': HomeHero;
-      'home.look': HomeLook;
       'home.outfit-gallery': HomeOutfitGallery;
       'shared.image': SharedImage;
       'shared.link': SharedLink;

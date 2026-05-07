@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "looks",
+  "info": {
+    "singularName": "look",
+    "pluralName": "looks",
+    "displayName": "Look"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
+    },
+    "Video": {
+      "type": "component",
+      "component": "shared.video",
+      "repeatable": true
+    },
+    "Image": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    }
+  }
+}
