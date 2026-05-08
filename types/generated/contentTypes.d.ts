@@ -628,6 +628,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     Main: Schema.Attribute.Media<'images' | 'files'>;
+    ProductDetails: Schema.Attribute.Component<'product.product-details', true>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

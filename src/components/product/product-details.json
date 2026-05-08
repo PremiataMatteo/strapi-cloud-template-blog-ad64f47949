@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_product_product_details",
+  "info": {
+    "displayName": "ProductDetails"
+  },
+  "options": {},
+  "attributes": {
+    "Point": {
+      "type": "component",
+      "component": "shared.point",
+      "repeatable": false,
+      "required": true
+    },
+    "Gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Body": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

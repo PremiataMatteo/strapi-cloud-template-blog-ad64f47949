@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_points",
+  "info": {
+    "displayName": "Point"
+  },
+  "options": {},
+  "attributes": {
+    "top": {
+      "type": "integer"
+    },
+    "left": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

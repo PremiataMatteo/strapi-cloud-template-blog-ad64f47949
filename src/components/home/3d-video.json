@@ -5,6 +5,14 @@
   },
   "options": {},
   "attributes": {
+    "Background": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
     "Video_3d": {
       "type": "component",
       "component": "shared.video",

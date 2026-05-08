@@ -39,6 +39,11 @@
         "images",
         "files"
       ]
+    },
+    "ProductDetails": {
+      "type": "component",
+      "component": "product.product-details",
+      "repeatable": true
     }
   }
 }
