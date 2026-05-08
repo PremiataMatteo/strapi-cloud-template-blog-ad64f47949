@@ -13,22 +13,32 @@
   "attributes": {
     "handle": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
-    "ProductImageFront": {
-      "type": "component",
-      "component": "shared.image",
-      "repeatable": false
+    "Main": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
     },
-    "ProductImageBack": {
-      "type": "component",
-      "component": "shared.image",
-      "repeatable": false
+    "Front": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
     },
-    "MainImage": {
-      "type": "component",
-      "component": "shared.image",
-      "repeatable": false
+    "Back": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
     }
   }
 }
