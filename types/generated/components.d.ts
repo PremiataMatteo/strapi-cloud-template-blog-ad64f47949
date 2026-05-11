@@ -51,7 +51,9 @@ export interface HomeOutfitGallery extends Struct.ComponentSchema {
     displayName: 'Outfit Gallery';
   };
   attributes: {
+    block_ref_id: Schema.Attribute.String & Schema.Attribute.Required;
     Description: Schema.Attribute.Blocks;
+    galleryTitle: Schema.Attribute.String & Schema.Attribute.Required;
     looks: Schema.Attribute.Relation<'oneToMany', 'api::look.look'>;
     Title: Schema.Attribute.String & Schema.Attribute.Required;
   };

@@ -5,18 +5,26 @@
   },
   "options": {},
   "attributes": {
+    "block_ref_id": {
+      "type": "string",
+      "required": true
+    },
     "Title": {
       "type": "string",
       "required": true
     },
-    "Description": {
-      "type": "blocks",
-      "required": false
+    "galleryTitle": {
+      "type": "string",
+      "required": true
     },
     "looks": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::look.look"
+    },
+    "Description": {
+      "type": "blocks",
+      "required": false
     }
   },
   "config": {}
