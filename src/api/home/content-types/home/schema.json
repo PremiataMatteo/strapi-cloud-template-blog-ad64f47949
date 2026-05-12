@@ -45,18 +45,9 @@
       "components": [
         "home.hero",
         "home.3d-video",
-        "home.outfit-gallery"
+        "home.outfit-gallery",
+        "home.hero-text"
       ]
-    },
-    "HeroText": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "home.hero-text",
-      "repeatable": true
     }
   }
 }

@@ -591,17 +591,11 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    HeroText: Schema.Attribute.Component<'home.hero-text', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'>;
     publishedAt: Schema.Attribute.DateTime;
     Sections: Schema.Attribute.DynamicZone<
-      ['home.hero', 'home.3d-video', 'home.outfit-gallery']
+      ['home.hero', 'home.3d-video', 'home.outfit-gallery', 'home.hero-text']
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
