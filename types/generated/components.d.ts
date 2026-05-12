@@ -45,6 +45,19 @@ export interface HomeHero extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeHeroText extends Struct.ComponentSchema {
+  collectionName: 'components_home_hero_texts';
+  info: {
+    displayName: 'HeroText';
+  };
+  attributes: {
+    BgDesktop: Schema.Attribute.Media<'images' | 'files'>;
+    BgMobile: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Body: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    Positiom: Schema.Attribute.Component<'shared.position', false>;
+  };
+}
+
 export interface HomeOutfitGallery extends Struct.ComponentSchema {
   collectionName: 'components_home_outfit_galleries';
   info: {
@@ -118,6 +131,21 @@ export interface SharedPoint extends Struct.ComponentSchema {
   attributes: {
     left: Schema.Attribute.Integer;
     top: Schema.Attribute.Integer;
+  };
+}
+
+export interface SharedPosition extends Struct.ComponentSchema {
+  collectionName: 'components_shared_positions';
+  info: {
+    displayName: 'Position';
+  };
+  attributes: {
+    column: Schema.Attribute.Enumeration<['left', 'right', 'center']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'left'>;
+    vertical: Schema.Attribute.Enumeration<['top', 'center', 'bottom']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'top'>;
   };
 }
 
@@ -203,12 +231,14 @@ declare module '@strapi/strapi' {
       'hero.hero-tag': HeroHeroTag;
       'home.3d-video': Home3DVideo;
       'home.hero': HomeHero;
+      'home.hero-text': HomeHeroText;
       'home.outfit-gallery': HomeOutfitGallery;
       'product.product-details': ProductProductDetails;
       'shared.image': SharedImage;
       'shared.link': SharedLink;
       'shared.menu': SharedMenu;
       'shared.point': SharedPoint;
+      'shared.position': SharedPosition;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;

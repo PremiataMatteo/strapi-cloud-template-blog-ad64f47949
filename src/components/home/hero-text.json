@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_home_hero_texts",
+  "info": {
+    "displayName": "HeroText"
+  },
+  "options": {},
+  "attributes": {
+    "BgDesktop": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "BgMobile": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Body": {
+      "type": "blocks",
+      "required": true
+    },
+    "Positiom": {
+      "type": "component",
+      "component": "shared.position",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}
