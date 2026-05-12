@@ -9,11 +9,7 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": false
-    }
-  },
+  "pluginOptions": {},
   "attributes": {
     "Name": {
       "type": "string",
@@ -27,6 +23,11 @@
       "type": "component",
       "component": "shared.social",
       "repeatable": false
+    },
+    "useCart": {
+      "type": "boolean",
+      "required": true,
+      "default": true
     }
   }
 }
