@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_socials",
+  "info": {
+    "displayName": "Social"
+  },
+  "options": {},
+  "attributes": {
+    "fb": {
+      "type": "string"
+    },
+    "ig": {
+      "type": "string"
+    },
+    "yt": {
+      "type": "string"
+    },
+    "ln": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

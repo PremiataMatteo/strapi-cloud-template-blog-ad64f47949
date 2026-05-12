@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "brands",
+  "info": {
+    "singularName": "brand",
+    "pluralName": "brands",
+    "displayName": "Brand"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": false
+    }
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "piva": {
+      "type": "string",
+      "required": true
+    },
+    "Social": {
+      "type": "component",
+      "component": "shared.social",
+      "repeatable": false
+    }
+  }
+}
