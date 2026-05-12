@@ -27,7 +27,7 @@
       "type": "blocks",
       "required": true
     },
-    "Positiom": {
+    "Position": {
       "type": "component",
       "component": "shared.position",
       "repeatable": false

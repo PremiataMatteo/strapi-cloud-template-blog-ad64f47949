@@ -54,7 +54,7 @@ export interface HomeHeroText extends Struct.ComponentSchema {
     BgDesktop: Schema.Attribute.Media<'images' | 'files'>;
     BgMobile: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Body: Schema.Attribute.Blocks & Schema.Attribute.Required;
-    Positiom: Schema.Attribute.Component<'shared.position', false>;
+    Position: Schema.Attribute.Component<'shared.position', false>;
   };
 }
 
