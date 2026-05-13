@@ -64,6 +64,7 @@ export interface HomeKeyProducts extends Struct.ComponentSchema {
     displayName: 'KeyProducts';
   };
   attributes: {
+    Mask: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
     Title: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -89,6 +90,9 @@ export interface HomeThreeCols extends Struct.ComponentSchema {
     displayName: 'ThreeCols';
   };
   attributes: {
+    Background: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     FirstText: Schema.Attribute.Blocks & Schema.Attribute.Required;
     Photos: Schema.Attribute.Component<'shared.photos', false> &
       Schema.Attribute.Required;

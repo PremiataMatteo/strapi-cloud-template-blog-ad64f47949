@@ -22,6 +22,16 @@
       "component": "shared.photos",
       "repeatable": false,
       "required": true
+    },
+    "Background": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   },
   "config": {}
