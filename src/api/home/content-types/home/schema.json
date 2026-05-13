@@ -46,7 +46,10 @@
         "home.hero",
         "home.3d-video",
         "home.outfit-gallery",
-        "home.hero-text"
+        "home.hero-text",
+        "home.three-cols",
+        "home.key-products",
+        "home.view-all"
       ]
     }
   }

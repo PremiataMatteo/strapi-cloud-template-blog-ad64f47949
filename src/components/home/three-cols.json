@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_home_three_cols",
+  "info": {
+    "displayName": "ThreeCols"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "FirstText": {
+      "type": "blocks",
+      "required": true
+    },
+    "SecondText": {
+      "type": "blocks",
+      "required": true
+    },
+    "Photos": {
+      "type": "component",
+      "component": "shared.photos",
+      "repeatable": false,
+      "required": true
+    }
+  },
+  "config": {}
+}

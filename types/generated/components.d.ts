@@ -58,6 +58,17 @@ export interface HomeHeroText extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeKeyProducts extends Struct.ComponentSchema {
+  collectionName: 'components_home_key_products';
+  info: {
+    displayName: 'KeyProducts';
+  };
+  attributes: {
+    products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface HomeOutfitGallery extends Struct.ComponentSchema {
   collectionName: 'components_home_outfit_galleries';
   info: {
@@ -68,6 +79,34 @@ export interface HomeOutfitGallery extends Struct.ComponentSchema {
     Description: Schema.Attribute.Blocks;
     galleryTitle: Schema.Attribute.String & Schema.Attribute.Required;
     looks: Schema.Attribute.Relation<'oneToMany', 'api::look.look'>;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface HomeThreeCols extends Struct.ComponentSchema {
+  collectionName: 'components_home_three_cols';
+  info: {
+    displayName: 'ThreeCols';
+  };
+  attributes: {
+    FirstText: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    Photos: Schema.Attribute.Component<'shared.photos', false> &
+      Schema.Attribute.Required;
+    SecondText: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface HomeViewAll extends Struct.ComponentSchema {
+  collectionName: 'components_home_view_alls';
+  info: {
+    displayName: 'ViewAll';
+  };
+  attributes: {
+    collections: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::collection.collection'
+    >;
     Title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -120,6 +159,21 @@ export interface SharedMenu extends Struct.ComponentSchema {
   attributes: {
     Links: Schema.Attribute.Component<'shared.link', true>;
     Title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SharedPhotos extends Struct.ComponentSchema {
+  collectionName: 'components_shared_photos';
+  info: {
+    displayName: 'Photos';
+  };
+  attributes: {
+    Image1: Schema.Attribute.Media<'files' | 'images', true> &
+      Schema.Attribute.Required;
+    Image2: Schema.Attribute.Media<'images' | 'files', true> &
+      Schema.Attribute.Required;
+    Image3: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
   };
 }
 
@@ -245,11 +299,15 @@ declare module '@strapi/strapi' {
       'home.3d-video': Home3DVideo;
       'home.hero': HomeHero;
       'home.hero-text': HomeHeroText;
+      'home.key-products': HomeKeyProducts;
       'home.outfit-gallery': HomeOutfitGallery;
+      'home.three-cols': HomeThreeCols;
+      'home.view-all': HomeViewAll;
       'product.product-details': ProductProductDetails;
       'shared.image': SharedImage;
       'shared.link': SharedLink;
       'shared.menu': SharedMenu;
+      'shared.photos': SharedPhotos;
       'shared.point': SharedPoint;
       'shared.position': SharedPosition;
       'shared.quote': SharedQuote;
