@@ -178,9 +178,9 @@ export interface SharedPhotos extends Struct.ComponentSchema {
     displayName: 'Photos';
   };
   attributes: {
-    Image1: Schema.Attribute.Media<'files' | 'images', true> &
+    Image1: Schema.Attribute.Media<'files' | 'images'> &
       Schema.Attribute.Required;
-    Image2: Schema.Attribute.Media<'images' | 'files', true> &
+    Image2: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
     Image3: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;

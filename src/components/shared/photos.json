@@ -7,7 +7,7 @@
   "attributes": {
     "Image1": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "allowedTypes": [
         "files",
@@ -16,7 +16,7 @@
     },
     "Image2": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "allowedTypes": [
         "images",
