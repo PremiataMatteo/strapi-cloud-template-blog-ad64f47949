@@ -64,6 +64,9 @@ export interface HomeKeyProducts extends Struct.ComponentSchema {
     displayName: 'KeyProducts';
   };
   attributes: {
+    block_ref_id: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
     Mask: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
     Title: Schema.Attribute.String & Schema.Attribute.Required;
@@ -107,6 +110,9 @@ export interface HomeViewAll extends Struct.ComponentSchema {
     displayName: 'ViewAll';
   };
   attributes: {
+    block_ref_id: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
     collections: Schema.Attribute.Relation<
       'oneToMany',
       'api::collection.collection'

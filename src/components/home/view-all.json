@@ -5,6 +5,11 @@
   },
   "options": {},
   "attributes": {
+    "block_ref_id": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
     "Title": {
       "type": "string",
       "required": true
