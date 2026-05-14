@@ -137,6 +137,16 @@ export interface ProductProductDetails extends Struct.ComponentSchema {
   };
 }
 
+export interface ProductProducts extends Struct.ComponentSchema {
+  collectionName: 'components_product_products';
+  info: {
+    displayName: 'Products';
+  };
+  attributes: {
+    products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
+  };
+}
+
 export interface SharedImage extends Struct.ComponentSchema {
   collectionName: 'components_shared_images';
   info: {
@@ -314,6 +324,7 @@ declare module '@strapi/strapi' {
       'home.three-cols': HomeThreeCols;
       'home.view-all': HomeViewAll;
       'product.product-details': ProductProductDetails;
+      'product.products': ProductProducts;
       'shared.image': SharedImage;
       'shared.link': SharedLink;
       'shared.menu': SharedMenu;
