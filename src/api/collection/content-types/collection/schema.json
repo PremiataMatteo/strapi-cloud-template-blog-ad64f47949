@@ -24,15 +24,10 @@
       },
       "required": true
     },
-    "Listing": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "component": "product.products",
-      "repeatable": false
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
     }
   }
 }
