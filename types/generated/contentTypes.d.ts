@@ -452,7 +452,6 @@ export interface ApiBrandBrand extends Struct.SingleTypeSchema {
     Name: Schema.Attribute.String & Schema.Attribute.Required;
     piva: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    siteUrl: Schema.Attribute.String & Schema.Attribute.Required;
     Social: Schema.Attribute.Component<'shared.social', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

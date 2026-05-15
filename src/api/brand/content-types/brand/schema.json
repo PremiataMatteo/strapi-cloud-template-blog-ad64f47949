@@ -29,10 +29,6 @@
       "required": true,
       "default": true
     },
-    "siteUrl": {
-      "type": "string",
-      "required": true
-    },
     "favicon": {
       "type": "media",
       "multiple": false,
