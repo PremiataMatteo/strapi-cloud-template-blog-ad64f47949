@@ -19,12 +19,7 @@ module.exports = ({ env }) => ({
     config: {
       allowedOrigins: env("CLIENT_URL"),
       async handler(uid, { documentId, locale, status }) {
-        // Costruisci l'URL in base allo status
-        if (status === "draft") {
-          return `${env("CLIENT_URL")}/api/preview?secret=${env('STRAPI_PREVIEW_SECRET')}&documentId=${documentId}&locale=${locale}&status=${status}`;
-        }
-
-        return `${env("CLIENT_URL")}/${locale}`;
+        return `${env("CLIENT_URL")}/api/preview?secret=${env('STRAPI_PREVIEW_SECRET')}&documentId=${documentId}&locale=${locale}&status=${status}`;
       },
     },
   },
