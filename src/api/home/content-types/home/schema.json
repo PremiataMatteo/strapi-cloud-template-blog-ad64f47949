@@ -33,7 +33,8 @@
         }
       },
       "component": "shared.seo",
-      "repeatable": false
+      "repeatable": false,
+      "required": true
     },
     "Sections": {
       "type": "dynamiczone",
